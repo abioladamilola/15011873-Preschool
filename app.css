@@ -1,0 +1,53 @@
+﻿fieldset {
+      border: 0;
+      align-items:center;
+    }
+    label {
+      display: block;
+      margin: 30px 0 0 0;
+    }
+.overflow {
+    height: 100px;
+}
+ .ui-controlgroup-vertical {
+      width: 150px;
+    }
+    .ui-controlgroup.ui-controlgroup-vertical > button.ui-button,
+    .ui-controlgroup.ui-controlgroup-vertical > .ui-controlgroup-label {
+      text-align: center;
+    }
+    #button {
+      width: 120px;
+    }
+    .ui-controlgroup-horizontal .ui-spinner-input {
+      width: 20px;
+    }
+    header{
+        min-height: 120px;
+    }
+      input[type='text'], textarea, select {
+}
+input[type='text'].focus, textarea.focus, select.focus {
+    border-color: #000 !important;
+}
+input[type='text'].invalid, textarea.invalid, select.invalid {
+    border-color: black;
+}
+input[type='text'].inactive, textarea.inactive, select.inactive, option.inactive {
+    color: #999;
+    font-style: italic;
+}
+input[type='text'].required, textarea.required {
+    background: url(required-input.png) right 5px no-repeat;
+}
+span.error {
+    font-weight: bold;
+    color: red;
+    border: 1px solid red;
+    padding: 4px 15px;
+    margin: 0 0 0 15px;
+    display: none;
+}
+
+
+  
