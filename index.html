@@ -1,162 +1,103 @@
 ﻿<!DOCTYPE html>
-<html>
+
+<html lang="en">
 <head>
-
-    <title>App</title>
-    <link href="app.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <title>PreMath App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="jquery.mobile-1.4.5.min.css" rel="stylesheet" />
-    <link href="app.css" rel="stylesheet" />
-      <script src="theme.js"></script>
-    <script src="jquery.min.js"></script>
-    <script src="jquery.mobile-1.4.5.min.js"></script>
-    <script src="jqm-spinbox.min.js"></script>
+    <link href="animate.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="app.css" type="text/css"/>
 
+    <script src="jquery-1.11.1.min.js"></script>
+    <script src="jquery.mobile-1.4.5.min.js"></script>
     <script src="app.js"></script>
-   
+
 </head>
 <body>
+<div data-role="page" id="index">
+    <!--<div data-role="header">
+        <h1>
+            Pre Math App
+        </h1>
+    </div>-->
+    <div role="main" class="ui-content">
+        <div class="top">
+            <div id="span0" class="number-buttons span0">
+                <img data-role="button" class="number-button" data-value="0" src="img/number0.png"/>
+                <img data-role="button" data-value="1" class="number-button" src="img/number1.png" alt=""/>
+                <img data-role="button" data-value="2" class="number-button" src="img/number2.png"/>
+                <img data-role="button" data-value="3" class="number-button" src="img/number3.png"/>
+                <img data-role="button" data-value="4" class="number-button" src="img/number4.png"/>
+                <img data-role="button" data-value="5" class="number-button" src="img/number5.png"/>
+                <img data-role="button" data-value="6" class="number-button" src="img/number6.png"/>
+                <img data-role="button" data-value="7" class="number-button" src="img/number7.png"/>
+                <img data-role="button" data-value="8" class="number-button" src="img/number8.png"/>
+                <img data-role="button" data-value="9" class="number-button" src="img/number9.png"/>
+            </div>
+            <div class="ui-helper-clearfix"></div>
+            <div class="calculator">
+                <h1 class="left-value"></h1>
+                <h1>+</h1>
+                <h1 class="right-value"></h1>
+                <h1>=</h1>
+                <h1 class="result"></h1>
+            </div>
+            <div class="ui-helper-clearfix"></div>
+        </div>
+        <div class="play-ground">
+            <div class="left-apples"></div>
+            <div class="right-apples"></div>
+        </div>
+        <div class="apples">
+        </div>
+        <img class="apple-plate" src="img/plate_white.png"/>
+        <div id="draggable"></div>
+    </div>
+    <!--<div data-role="footer" data-position="fixed">
+        <h3>
+            &copy; 2016. Dami
+        </h3>
+    </div>-->
+    <div data-role="popup" id="errorDialog" data-transition="pop" data-position-to="window">
+        <div data-role="content">
+            <h3 class="title"></h3>
+            <p class="message"></p>
+            <a href="#" data-role="button" data-rel="back">Ok</a>
+        </div>
+    </div>
 
-    <script>
+</div>
+    <div data-role="page" id="successPage">
+
+        <div role="main" class="ui-content">
 
 
+            <div class="success">
+                <img class="star animated tada" src="img/star_kids.png" />
+                <img class="star star2 animated bounce" src="img/star_kids.png" />
+                <div class="ui-helper-clearfix"></div>
 
-
-        function gotoQuantity(obj) {
-            $.mobile.changePage("#quantity");
-            vegetablesChosen = $(obj).text();
-            $("#groceryname").text(groceriesChosen);
-
-
-        }
-
-        function showChosenItems() {
-            if ($("#spin").val() != "0") saveChoice();
-
-            //remove existing items from shopping list
-            $("#shoppingList").empty();
-
-            //iterate through the dictionary chosenItems
-            for (var key in chosenItems) {
-
-                vegData = key + ":" + chosenItems[key];
-                $('<li>').append('<a href="#">' + groceryData + '</a>').appendTo('#shoppingList');
-
-
-            }
-            //you have to navigate to the page after you have populated
-            $.mobile.changePage("#finalShoppingList");
-            $("#shoppingList").listview('refresh');
-
-        }
-
-        function backToList() {
-            saveChoice();
-            $.mobile.changePage("#pageone");
-            $("#spin").val(0);
-        }
-
-        function saveChoice() {
-           groceryChosen = $("#groceryname").text();
-            quantityChosen = $("#spin").val();
-            chosenItems[groceryChosen] = quantityChosen;
-            localStorage.setItem("previousList", JSON.stringify(chosenItems));
-        }
-    </script>
-
-
-    <div data-role="page" id="pageone" >
-        <div data-role="header" text-align="center">
-            <div data-role="header" text-align="center">
-                <h1>My Shopping List</h1>
-                <div data-role="controlgroup" data-type="horizontal" data-icon="options">
-                    <a href="#addItems" class="ui-btn" data-icon="plus">Add Items</a>
-                    <a href="#myPanel"class="ui-btn" data-icon="edit">Edit</a>
-                    <a href="#pageone" class="ui-btn" data-icon="delete">Delete</a>
+                <div class="results">
+                    <h1 class="left-value"></h1>
+                    <h1>+</h1>
+                    <h1 class="right-value"></h1>
+                    <h1>=</h1>
+                    <h1 class="result"></h1>
                 </div>
+                <div class="ui-helper-clearfix"></div>
+  <div>
+                    <img class="play-again" data-role="button" src="img/play_again.png"/>
+                    <img class="thumbs-up" src="img/thumbs_up.png"/>
+                </div>
+                <div class="ui-helper-clearfix"></div>
+  <img class="star star3 animated tada" src="img/star_kids.png"  />
+                <img class="star star4  animated bounce" src="img/star_kids.png" />
             </div>
         </div>
-        <div data-role="main" class="ui-content">
-            <h2>Groceries</h2>
-            <form class="ui-filterable">
-                <input id="myFilter" data-type="search">
 
-            </form>
-            <ul data-role="listview" data-filter="true" data-input="#myFilter" data-autodividers="true" data-inset="true" data-type="horizontal">
-                <li>
-                    <a onclick="gotoQuantity(this)">Apple</a>
-                </li>
-                <li><a onclick="gotoQuantity(this)">Apricots</a></li>
-                <li><a onclick="gotoQuantity(this)">Aubergines</a></li>
-                <li><a onclick="gotoQuantity(this)">Bananas</a></li>
-                <li><a onclick="gotoQuantity(this)">Beetroot</a></li>
-                <li><a onclick="gotoQuantity(this)">Carrots</a></li>
-                <li><a onclick="gotoQuantity(this)">Cornflakes</a></li>
-                <li><a onclick="gotoQuantity(this)">Courgettes</a></li>
-                <li><a onclick="gotoQuantity(this)">Chives</a></li>
-                <li><a onclick="gotoQuantity(this)">Fennel</a></li>
-                <li><a onclick="gotoQuantity(this)">Milk</a></li>
-                <li><a onclick="gotoQuantity(this)">Potatoes</a></li>
-                <li><a onclick="gotoQuantity(this)">Salt</a></li>
-                <li><a onclick="gotoQuantity(this)">Strawberries</a></li>
-                <li><a onclick="gotoQuantity(this)">Sugar</a></li>
-            </ul>
-        </div>
-        <input type="text" name="text" id="text" placeholder="Text" class="ui-hidden-accessible">
 
-        <div data-role="footer">
-            <h3>&copy; Dami</h3>
-        </div>
     </div>
-
-
-
-
-
-
-
-
-
-    <div data-role="page" id="quantity" >
-        <div data-role="main" class="ui-content">
-            <div id="groceryname"></div>
-            <div class="ui-field-contain">
-                <label for="spin">Input spinner</label>
-                <input type="text" data-role="spinbox" name="spin" id="spin" value="0" min="0" max="10" />
-            </div>
-            <div data-role="controlgroup" data-type="horizontal">
-                <a href="backToList()" class="ui-btn">Choose Again</a>
-                <a href="showChosenItems()" class="ui-btn">Show Chosen Items</a>
-            </div>
-        </div>
-    </div>
-    
-
-
-    <div data-role="page" id="finalShoppingList" >
-        <div data-role="main" class="ui-content">
-            <ul data-role="listview" data-filter="true" data-input="#myFilter" data-autodividers="true" data-inset="true" id="shoppingList"></ul>
-            <button onclick="$.mobile.changePage('#pageone');">Choose Again</button>
-            <button onclick="$.mobile.changePage('#pageone');">Submit</button>
-
-        </div>
-    </div>
-
-
-
-    <div data-role="page" id="addItems" >
-        <div data-role="main" class="ui-content">
-            <div id="AddItem"></div>
-            <div data-role="fieldcontain">
-                <label for="textarea">Textarea:</label>
-                <input id="text" class="required email placeholder" type="text" name="text" value="This field is required." size="24" /><span class="error">Enter some text here.</span>
-            </div>
-            </div>
-            <div data-role="controlgroup" data-type="horizontal" >
-                <button onclick="$.mobile.changePage('#myFilter');">Submit</button>
-                <button onclick="$.mobile.changePage('#quantity');">Cancel</button>
-            </div>
-         
-        </div>  
 
 </body>
 </html>

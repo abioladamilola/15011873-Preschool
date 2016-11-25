@@ -1,53 +1,152 @@
-﻿fieldset {
-      border: 0;
-      align-items:center;
-    }
-    label {
-      display: block;
-      margin: 30px 0 0 0;
-    }
-.overflow {
-    height: 100px;
+﻿body {
+    font-family: 'Segoe UI', sans-serif;
 }
- .ui-controlgroup-vertical {
-      width: 150px;
-    }
-    .ui-controlgroup.ui-controlgroup-vertical > button.ui-button,
-    .ui-controlgroup.ui-controlgroup-vertical > .ui-controlgroup-label {
-      text-align: center;
-    }
-    #button {
-      width: 120px;
-    }
-    .ui-controlgroup-horizontal .ui-spinner-input {
-      width: 20px;
-    }
-    header{
-        min-height: 120px;
-    }
-      input[type='text'], textarea, select {
+html, body, #index {
+    height: 99.9%;
 }
-input[type='text'].focus, textarea.focus, select.focus {
-    border-color: #000 !important;
-}
-input[type='text'].invalid, textarea.invalid, select.invalid {
-    border-color: black;
-}
-input[type='text'].inactive, textarea.inactive, select.inactive, option.inactive {
-    color: #999;
+span {
     font-style: italic;
 }
-input[type='text'].required, textarea.required {
-    background: url(required-input.png) right 5px no-repeat;
+.ui-content {
+       padding: 0;
+    height: inherit;
 }
-span.error {
-    font-weight: bold;
-    color: red;
-    border: 1px solid red;
-    padding: 4px 15px;
-    margin: 0 0 0 15px;
-    display: none;
+.ui-helper-clearfix {
+    clear: both;
 }
+div.top {
+    width: 100%;
+    margin: 0;
+    background: #ddd;
+}
+div#span0 {
+    width: 100%;
+}
+#draggable {width:50px;height:50px;background-color:#f00;position:absolute}
+.span button {
+    background: transparent;
+    border: 0;
+}
+ .number-buttons img {
+    width: 15%;
+     float: left;
+     margin: 1% 2%;
 
+}
+ .calculator, .results {
+   width: 100%;
+    font-size: 1.5em;
+ }
+ .calculator h1,  .results h1 {
+     float: left;
+     text-align: justify;
+     margin: 10px 15px;
+ }
+  .calculator h1.result,.results h1  {
+      color: #ff0000;
+  }
+  .error {
+    transition: all .2s ease-in-out;   transform: scale(1.5);
+  }
+ .play-ground {
+   min-height: 150px;
+    padding: 20px;
 
-  
+ }
+ .left-apples {
+    float: left;
+}
+ .right-apples {
+    float: right;
+}
+ img.apple-plate {
+   position: relative;
+    width: 85%;
+}
+ .apples {
+     
+ }
+ img.apple-in-play {
+      width: 70px;
+    float: left; 
+ }
+img.apple {
+ bottom: 18%;
+    float: left;
+    left: 10%;
+    margin: 0 5px;
+    position: fixed;
+    width: 70px;
+    z-index: 100;
+}
+img#apple1 {
+    left: 58%;
+    bottom:7%;
+}
+img#apple2 {
+        left: 60%;
+    bottom: 5%;
+    z-index: 110;
+}
+img#apple3 {
+left: 38%;
+    bottom: 1%;
+    margin-left: 5px;
+}
+img#apple4 {
+        left: 40%;
+    bottom: 1.8%;
+    z-index: 110;
+}
+img#apple5 {
+      left: 48%;
+    bottom: 2.6%;
+}
+img#apple6 {
+          left: 50%;
+    bottom: 1%;
+}
+img#apple7 {
+       left: 30%;
+    bottom: 1%;
+}
+img#apple8 {
+      left: 27%;
+    bottom: 1%;
+}
+img#apple9 {
+      left: 34%;
+    bottom: -7s%;
+    z-index: 110;
+}
+img.play-again {
+       margin-left: 5%; 
+    vertical-align: middle;
+    align-self: center;
+    width: 40%;
+}
+img.thumbs-up {
+    width: 20%;
+    left: 0;
+    float: left;
+}
+img.star {
+    float: left;
+    width: 30%;
+    opacity: .5;
+}
+img.star.star2 {
+    float: right;
+    width: 20%;
+    opacity: .6;
+    top: 50%;
+}
+img.star.star3 {
+    opacity: 1;
+    width: 130px;
+    float: left;
+}
+img.star.star4 {
+    float: right;
+    opacity: .8;
+}
